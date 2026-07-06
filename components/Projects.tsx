@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo , memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaExternalLinkAlt, FaGithub, FaTimes, FaFilter } from 'react-icons/fa';
@@ -18,17 +18,17 @@ interface Project {
   githubUrl?: string;
   category: string;
   subCategory?: string;
-}
+};
 
 // ─── Category metadata ────────────────────────────────────────────────────────
 const CATEGORY_META: Record<string, { label: string; accent: string; ring: string; bg: string }> = {
-  all:               { label: 'All',           accent: 'text-white',        ring: 'border-white/40',          bg: 'bg-white/10'           },
-  web:               { label: 'Web',           accent: 'text-violet-400',   ring: 'border-violet-500/50',     bg: 'bg-violet-500/10'      },
-  mobile_reactnative:{ label: 'React Native',  accent: 'text-cyan-400',     ring: 'border-cyan-500/50',       bg: 'bg-cyan-500/10'        },
-  mobile_native:     { label: 'Native Mobile', accent: 'text-emerald-400',  ring: 'border-emerald-500/50',    bg: 'bg-emerald-500/10'     },
-  mobile_flutter:    { label: 'Flutter',       accent: 'text-blue-400',     ring: 'border-blue-500/50',       bg: 'bg-blue-500/10'        },
-  backend:           { label: 'Backend',       accent: 'text-orange-400',   ring: 'border-orange-500/50',     bg: 'bg-orange-500/10'      },
-  n8n:               { label: 'Automation',    accent: 'text-pink-400',     ring: 'border-pink-500/50',       bg: 'bg-pink-500/10'        },
+  all: { label: 'All', accent: 'text-white', ring: 'border-white/40', bg: 'bg-white/10' },
+  web: { label: 'Web', accent: 'text-violet-400', ring: 'border-violet-500/50', bg: 'bg-violet-500/10' },
+  mobile_reactnative: { label: 'React Native', accent: 'text-cyan-400', ring: 'border-cyan-500/50', bg: 'bg-cyan-500/10' },
+  mobile_native: { label: 'Native Mobile', accent: 'text-emerald-400', ring: 'border-emerald-500/50', bg: 'bg-emerald-500/10' },
+  mobile_flutter: { label: 'Flutter', accent: 'text-blue-400', ring: 'border-blue-500/50', bg: 'bg-blue-500/10' },
+  backend: { label: 'Backend', accent: 'text-orange-400', ring: 'border-orange-500/50', bg: 'bg-orange-500/10' },
+  n8n: { label: 'Automation', accent: 'text-pink-400', ring: 'border-pink-500/50', bg: 'bg-pink-500/10' },
 };
 
 const getCategoryMeta = (cat: string) =>
@@ -36,16 +36,16 @@ const getCategoryMeta = (cat: string) =>
 
 // ─── SubCategory display labels ───────────────────────────────────────────────
 const SUBCATEGORY_LABEL: Record<string, string> = {
-  fullstack_web_mobileapps:                     'Fullstack · Web + Mobile',
-  fullstack_mobileapps_adminportal:             'Fullstack · Mobile + Admin Portal',
-  fullstack_web:                                'Fullstack · Web',
-  backend_microservices:                        'Backend · Microservices',
-  frontend_only_web:                            'Frontend · Web',
-  workflow_automation:                          'Workflow Automation',
-  frontend_only_mobileapp_native:               'Native App',
-  frontend_only_mobileapp_hybrid:               'Hybrid App',
-  fullstack_mobileapps:                         'Fullstack · Mobile',
-  fullstack_mobileapp:                          'Fullstack · Mobile',
+  fullstack_web_mobileapps: 'Fullstack · Web + Mobile',
+  fullstack_mobileapps_adminportal: 'Fullstack · Mobile + Admin Portal',
+  fullstack_web: 'Fullstack · Web',
+  backend_microservices: 'Backend · Microservices',
+  frontend_only_web: 'Frontend · Web',
+  workflow_automation: 'Workflow Automation',
+  frontend_only_mobileapp_native: 'Native App',
+  frontend_only_mobileapp_hybrid: 'Hybrid App',
+  fullstack_mobileapps: 'Fullstack · Mobile',
+  fullstack_mobileapp: 'Fullstack · Mobile',
   fullstackfrontend_only_mobileapp_native_mobileapps: 'Native App · IoT',
 };
 
@@ -54,59 +54,59 @@ const formatSubCategory = (sub: string) =>
 
 // ─── Tech tag colour map ──────────────────────────────────────────────────────
 const TAG_COLOR: Record<string, string> = {
-  react:           'bg-cyan-500/10 text-cyan-400 border-cyan-500/30',
-  'react-native':  'bg-cyan-500/10 text-cyan-400 border-cyan-500/30',
-  nextjs:          'bg-slate-500/20 text-slate-300 border-slate-500/30',
-  nestjs:          'bg-red-500/10 text-red-400 border-red-500/30',
-  nodejs:          'bg-green-500/10 text-green-400 border-green-500/30',
-  express:         'bg-green-500/10 text-green-400 border-green-500/30',
-  mongodb:         'bg-green-600/10 text-green-500 border-green-600/30',
-  postgresql:      'bg-blue-600/10 text-blue-400 border-blue-600/30',
-  mysql:           'bg-blue-500/10 text-blue-400 border-blue-500/30',
-  mssql:           'bg-blue-500/10 text-blue-400 border-blue-500/30',
-  typescript:      'bg-blue-500/10 text-blue-400 border-blue-500/30',
-  javascript:      'bg-yellow-500/10 text-yellow-400 border-yellow-500/30',
-  tailwind:        'bg-teal-500/10 text-teal-400 border-teal-500/30',
-  docker:          'bg-sky-500/10 text-sky-400 border-sky-500/30',
-  android:         'bg-lime-500/10 text-lime-400 border-lime-500/30',
-  ios:             'bg-gray-500/10 text-gray-300 border-gray-500/30',
-  hybrid:          'bg-purple-500/10 text-purple-400 border-purple-500/30',
-  mobile:          'bg-purple-500/10 text-purple-400 border-purple-500/30',
-  web:             'bg-violet-500/10 text-violet-400 border-violet-500/30',
-  flutter:         'bg-blue-500/10 text-blue-400 border-blue-500/30',
-  dart:            'bg-blue-500/10 text-blue-400 border-blue-500/30',
-  kotlin:          'bg-orange-500/10 text-orange-400 border-orange-500/30',
-  java:            'bg-amber-500/10 text-amber-400 border-amber-500/30',
-  native:          'bg-emerald-500/10 text-emerald-400 border-emerald-500/30',
-  rabbitmq:        'bg-orange-500/10 text-orange-400 border-orange-500/30',
-  'ci/cd':         'bg-pink-500/10 text-pink-400 border-pink-500/30',
-  sentry:          'bg-rose-500/10 text-rose-400 border-rose-500/30',
-  n8n:             'bg-pink-500/10 text-pink-400 border-pink-500/30',
-  ai:              'bg-fuchsia-500/10 text-fuchsia-400 border-fuchsia-500/30',
-  chatbot:         'bg-fuchsia-500/10 text-fuchsia-400 border-fuchsia-500/30',
-  ollama:          'bg-fuchsia-500/10 text-fuchsia-400 border-fuchsia-500/30',
-  fintech:         'bg-emerald-600/10 text-emerald-400 border-emerald-600/30',
-  payments:        'bg-emerald-600/10 text-emerald-400 border-emerald-600/30',
-  ecommerce:       'bg-emerald-600/10 text-emerald-400 border-emerald-600/30',
-  vpn:             'bg-indigo-500/10 text-indigo-400 border-indigo-500/30',
-  security:        'bg-indigo-500/10 text-indigo-400 border-indigo-500/30',
-  cybersecurity:   'bg-indigo-500/10 text-indigo-400 border-indigo-500/30',
-  iot:             'bg-teal-600/10 text-teal-400 border-teal-600/30',
-  rfid:            'bg-teal-600/10 text-teal-400 border-teal-600/30',
-  azure:           'bg-sky-600/10 text-sky-400 border-sky-600/30',
-  'c#':            'bg-purple-600/10 text-purple-400 border-purple-600/30',
-  '.net':          'bg-purple-600/10 text-purple-400 border-purple-600/30',
-  messaging:       'bg-blue-400/10 text-blue-300 border-blue-400/30',
-  playstore:       'bg-lime-600/10 text-lime-400 border-lime-600/30',
-  appstore:        'bg-gray-400/10 text-gray-300 border-gray-400/30',
-  html:            'bg-orange-500/10 text-orange-400 border-orange-500/30',
-  css:             'bg-blue-500/10 text-blue-400 border-blue-500/30',
-  js:              'bg-yellow-500/10 text-yellow-400 border-yellow-500/30',
-  vapi:            'bg-indigo-600/10 text-indigo-400 border-indigo-600/30',
-  mediapipe:       'bg-red-500/10 text-red-400 border-red-500/30',
-  realm:           'bg-purple-600/10 text-purple-400 border-purple-600/30',
-  websocket:       'bg-sky-500/10 text-sky-400 border-sky-500/30',
-  zustand:         'bg-amber-600/10 text-amber-400 border-amber-600/30',
+  react: 'bg-cyan-500/10 text-cyan-400 border-cyan-500/30',
+  'react-native': 'bg-cyan-500/10 text-cyan-400 border-cyan-500/30',
+  nextjs: 'bg-slate-500/20 text-slate-300 border-slate-500/30',
+  nestjs: 'bg-red-500/10 text-red-400 border-red-500/30',
+  nodejs: 'bg-green-500/10 text-green-400 border-green-500/30',
+  express: 'bg-green-500/10 text-green-400 border-green-500/30',
+  mongodb: 'bg-green-600/10 text-green-500 border-green-600/30',
+  postgresql: 'bg-blue-600/10 text-blue-400 border-blue-600/30',
+  mysql: 'bg-blue-500/10 text-blue-400 border-blue-500/30',
+  mssql: 'bg-blue-500/10 text-blue-400 border-blue-500/30',
+  typescript: 'bg-blue-500/10 text-blue-400 border-blue-500/30',
+  javascript: 'bg-yellow-500/10 text-yellow-400 border-yellow-500/30',
+  tailwind: 'bg-teal-500/10 text-teal-400 border-teal-500/30',
+  docker: 'bg-sky-500/10 text-sky-400 border-sky-500/30',
+  android: 'bg-lime-500/10 text-lime-400 border-lime-500/30',
+  ios: 'bg-gray-500/10 text-gray-300 border-gray-500/30',
+  hybrid: 'bg-purple-500/10 text-purple-400 border-purple-500/30',
+  mobile: 'bg-purple-500/10 text-purple-400 border-purple-500/30',
+  web: 'bg-violet-500/10 text-violet-400 border-violet-500/30',
+  flutter: 'bg-blue-500/10 text-blue-400 border-blue-500/30',
+  dart: 'bg-blue-500/10 text-blue-400 border-blue-500/30',
+  kotlin: 'bg-orange-500/10 text-orange-400 border-orange-500/30',
+  java: 'bg-amber-500/10 text-amber-400 border-amber-500/30',
+  native: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30',
+  rabbitmq: 'bg-orange-500/10 text-orange-400 border-orange-500/30',
+  'ci/cd': 'bg-pink-500/10 text-pink-400 border-pink-500/30',
+  sentry: 'bg-rose-500/10 text-rose-400 border-rose-500/30',
+  n8n: 'bg-pink-500/10 text-pink-400 border-pink-500/30',
+  ai: 'bg-fuchsia-500/10 text-fuchsia-400 border-fuchsia-500/30',
+  chatbot: 'bg-fuchsia-500/10 text-fuchsia-400 border-fuchsia-500/30',
+  ollama: 'bg-fuchsia-500/10 text-fuchsia-400 border-fuchsia-500/30',
+  fintech: 'bg-emerald-600/10 text-emerald-400 border-emerald-600/30',
+  payments: 'bg-emerald-600/10 text-emerald-400 border-emerald-600/30',
+  ecommerce: 'bg-emerald-600/10 text-emerald-400 border-emerald-600/30',
+  vpn: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/30',
+  security: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/30',
+  cybersecurity: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/30',
+  iot: 'bg-teal-600/10 text-teal-400 border-teal-600/30',
+  rfid: 'bg-teal-600/10 text-teal-400 border-teal-600/30',
+  azure: 'bg-sky-600/10 text-sky-400 border-sky-600/30',
+  'c#': 'bg-purple-600/10 text-purple-400 border-purple-600/30',
+  '.net': 'bg-purple-600/10 text-purple-400 border-purple-600/30',
+  messaging: 'bg-blue-400/10 text-blue-300 border-blue-400/30',
+  playstore: 'bg-lime-600/10 text-lime-400 border-lime-600/30',
+  appstore: 'bg-gray-400/10 text-gray-300 border-gray-400/30',
+  html: 'bg-orange-500/10 text-orange-400 border-orange-500/30',
+  css: 'bg-blue-500/10 text-blue-400 border-blue-500/30',
+  js: 'bg-yellow-500/10 text-yellow-400 border-yellow-500/30',
+  vapi: 'bg-indigo-600/10 text-indigo-400 border-indigo-600/30',
+  mediapipe: 'bg-red-500/10 text-red-400 border-red-500/30',
+  realm: 'bg-purple-600/10 text-purple-400 border-purple-600/30',
+  websocket: 'bg-sky-500/10 text-sky-400 border-sky-500/30',
+  zustand: 'bg-amber-600/10 text-amber-400 border-amber-600/30',
 };
 
 const tagClass = (tag: string) =>
@@ -526,4 +526,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default memo(Projects);

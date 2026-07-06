@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, memo } from 'react';
 import { animate, createScope, stagger, utils } from 'animejs';
 
 interface Particle {
@@ -8,12 +8,12 @@ interface Particle {
   y: number;
   size: number;
   colorIndex: number;
-}
+};
 
 const COLORS = ['#6366f1', '#8b5cf6', '#06b6d4'];
 const COUNT = 45;
 
-export default function ParticleBackground() {
+const ParticleBackground = () => {
   const root = useRef<HTMLDivElement>(null);
   const scope = useRef<any>(null);
   const [particles, setParticles] = useState<Particle[]>([]);
@@ -79,4 +79,6 @@ export default function ParticleBackground() {
       ))}
     </div>
   );
-}
+};
+
+export default memo(ParticleBackground);

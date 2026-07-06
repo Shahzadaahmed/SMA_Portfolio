@@ -1,5 +1,6 @@
 'use client';
 
+import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { education } from '@/data/portfolio-data';
@@ -52,7 +53,7 @@ const Education = () => {
                   </div>
 
                   <p className="text-gray-400 mb-3">{edu.institution}</p>
-                  
+
                   <div className="mt-auto">
                     <div className="inline-block px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/30">
                       <p className="text-primary-500 font-semibold text-sm">
@@ -70,4 +71,4 @@ const Education = () => {
   );
 };
 
-export default Education;
+export default memo(Education);

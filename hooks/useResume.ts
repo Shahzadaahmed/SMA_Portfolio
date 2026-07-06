@@ -15,7 +15,7 @@ export const useResume = () => {
     let selectedId = '';
 
     const validRoles = resumeData.map(r => r.id);
-    
+
     if (validRoles.includes(hash)) {
       selectedId = hash;
       // Store in session storage

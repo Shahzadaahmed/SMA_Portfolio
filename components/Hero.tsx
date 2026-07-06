@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState, memo } from 'react';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope, FaChevronDown } from 'react-icons/fa';
 import { personalInfo } from '@/data/portfolio-data';
@@ -29,7 +29,9 @@ const Hero = () => {
       if (charIndex <= currentText.length) {
         setTypedText(currentText.substring(0, charIndex));
         charIndex++;
-      } else {
+      }
+      
+      else {
         clearInterval(typeInterval);
         setTimeout(() => {
           setCurrentRole((prev) => (prev + 1) % roles.length);
@@ -264,4 +266,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default memo(Hero);

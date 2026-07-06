@@ -33,4 +33,4 @@ export function useAnimeScope<T extends HTMLElement = HTMLDivElement>(
   }, [enabled, ...deps]);
 
   return { root, scope };
-}
+};

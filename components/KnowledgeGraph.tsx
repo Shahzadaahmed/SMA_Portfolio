@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useRef, useMemo, useState, useEffect } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Float, Sphere, Text, Line } from '@react-three/drei';
+import React, { useRef, useMemo, useState, useEffect , memo } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Float, Text, Line } from '@react-three/drei';
 import * as THREE from 'three';
 import { getGraphData, GraphNode, GraphLink } from '@/data/graphData';
 
@@ -204,4 +204,4 @@ const KnowledgeGraph = () => {
   );
 };
 
-export default KnowledgeGraph;
+export default memo(KnowledgeGraph);

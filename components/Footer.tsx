@@ -1,5 +1,6 @@
 'use client';
 
+import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope, FaHeart, FaArrowUp } from 'react-icons/fa';
 import { personalInfo } from '@/data/portfolio-data';
@@ -132,4 +133,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

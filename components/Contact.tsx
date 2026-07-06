@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { personalInfo } from '@/data/portfolio-data';
@@ -63,12 +63,15 @@ const Contact = () => {
       // Reset success message after 5 seconds
       setTimeout(() => {
         setStatus('idle');
-      }, 5000);
-    } catch (error) {
+      },
+        5000);
+    }
+
+    catch (error) {
       console.error('Error opening mail client:', error);
       setStatus('error');
       setErrorMessage('Could not open email client. Please email directly.');
-    }
+    };
   };
 
   return (
@@ -262,4 +265,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default memo(Contact);

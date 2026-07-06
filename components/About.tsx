@@ -1,5 +1,6 @@
 'use client';
 
+import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { personalInfo } from '@/data/portfolio-data';
@@ -145,4 +146,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default memo(About);

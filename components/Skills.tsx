@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, memo } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { skills } from '@/data/portfolio-data';
@@ -9,21 +9,21 @@ import { animate, createScope } from 'animejs';
 
 // ─── Stat data ────────────────────────────────────────────────────────────────
 const STATS = [
-  { target: 5,  suffix: '+', label: 'Years Experience'    },
-  { target: 6,  suffix: '+', label: 'Technologies'        },
-  { target: 11, suffix: '+', label: 'Projects Completed'  },
+  { target: 5, suffix: '+', label: 'Years Experience' },
+  { target: 6, suffix: '+', label: 'Technologies' },
+  { target: 11, suffix: '+', label: 'Projects Completed' },
   { target: 95, suffix: '%', label: 'Client Satisfaction' },
 ];
 
 // ─── Framer Motion variants ───────────────────────────────────────────────────
 const container = {
   hidden: { opacity: 0 },
-  show:   { opacity: 1, transition: { staggerChildren: 0.05 } },
+  show: { opacity: 1, transition: { staggerChildren: 0.05 } },
 };
 
 const item = {
   hidden: { opacity: 0, y: 20 },
-  show:   { opacity: 1, y: 0  },
+  show: { opacity: 1, y: 0 },
 };
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -32,7 +32,7 @@ const Skills = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   // anime.js scope for stats section
-  const statsRef  = useRef<HTMLDivElement>(null);
+  const statsRef = useRef<HTMLDivElement>(null);
   const statsScope = useRef<any>(null);
   const [statsRef2, statsInView] = useInView({ triggerOnce: true, threshold: 0.3 });
 
@@ -50,10 +50,10 @@ const Skills = () => {
       STATS.forEach((stat, index) => {
         const obj = { value: 0 };
         animate(obj, {
-          value:    stat.target,
+          value: stat.target,
           duration: 1800,
-          delay:    200 + index * 120,
-          ease:     'out(4)',
+          delay: 200 + index * 120,
+          ease: 'out(4)',
           onUpdate: () => {
             const el = document.getElementById(`anime-stat-${index}`);
             if (el) el.textContent = `${Math.round(obj.value)}${stat.suffix}`;
@@ -64,9 +64,9 @@ const Skills = () => {
       // Subtle glow pulse on each stat heading
       animate('.anime-stat-value', {
         filter: ['brightness(1)', 'brightness(1.4)', 'brightness(1)'],
-        delay:   2200,
+        delay: 2200,
         duration: 1200,
-        ease:    'inOut(2)',
+        ease: 'inOut(2)',
       });
     });
 
@@ -157,4 +157,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default memo(Skills);

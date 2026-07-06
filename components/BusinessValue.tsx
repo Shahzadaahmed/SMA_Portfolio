@@ -1,5 +1,6 @@
 'use client';
 
+import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { businessValue } from '@/data/portfolio-data';
@@ -69,4 +70,4 @@ const BusinessValue = () => {
   );
 };
 
-export default BusinessValue;
+export default memo(BusinessValue);
