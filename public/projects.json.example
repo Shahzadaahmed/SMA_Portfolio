@@ -1,0 +1,103 @@
+[
+  {
+    "title": "E-Commerce Mobile App",
+    "description": "Full-featured mobile e-commerce platform with real-time inventory management, secure payment processing, user authentication, and personalized recommendations. Built with React Native for cross-platform deployment.",
+    "image": "/projects/ecommerce-app.png",
+    "media": "/projects/ecommerce-demo.mp4",
+    "tags": ["React Native", "Firebase", "Redux", "Stripe API", "Node.js"],
+    "liveUrl": "https://apps.apple.com/app/your-app",
+    "githubUrl": "https://github.com/MHaris404/ecommerce-mobile",
+    "featured": true,
+    "category": "mobile"
+  },
+  {
+    "title": "Real-Time Chat Application",
+    "description": "Scalable real-time messaging platform with end-to-end encryption, group chats, file sharing, and video calls. Supports thousands of concurrent users with WebSocket connections.",
+    "image": "/projects/chat-app.png",
+    "tags": ["React", "Socket.io", "Node.js", "MongoDB", "Redis", "WebRTC"],
+    "liveUrl": "https://chat-demo.vercel.app",
+    "githubUrl": "https://github.com/MHaris404/realtime-chat",
+    "featured": true,
+    "category": "web"
+  },
+  {
+    "title": "AI-Powered Task Manager",
+    "description": "Intelligent task management system with AI-driven priority suggestions, smart scheduling, team collaboration features, and productivity analytics. Integrates with calendar and email.",
+    "image": "/projects/task-manager.png",
+    "media": "/projects/task-manager-demo.mp4",
+    "tags": ["Next.js", "TypeScript", "Python", "TensorFlow", "PostgreSQL"],
+    "liveUrl": "https://taskmanager.com",
+    "githubUrl": "https://github.com/MHaris404/ai-task-manager",
+    "featured": true,
+    "category": "web"
+  },
+  {
+    "title": "RESTful API Microservices",
+    "description": "Containerized microservices architecture with API gateway, service discovery, and distributed tracing. Handles 10,000+ requests per second with auto-scaling.",
+    "image": "/projects/microservices.png",
+    "tags": ["Node.js", "Express", "Docker", "Kubernetes", "PostgreSQL", "Redis"],
+    "githubUrl": "https://github.com/MHaris404/microservices-api",
+    "featured": false,
+    "category": "backend"
+  },
+  {
+    "title": "Fitness Tracking App",
+    "description": "Comprehensive fitness and health tracking mobile app with workout plans, nutrition tracking, progress analytics, and social features. Integrates with wearable devices.",
+    "image": "/projects/fitness-app.png",
+    "media": "/projects/fitness-demo.mp4",
+    "tags": ["Kotlin", "Jetpack Compose", "Firebase", "HealthKit", "Room DB"],
+    "liveUrl": "https://play.google.com/store/apps/fitness-tracker",
+    "githubUrl": "https://github.com/MHaris404/fitness-tracker",
+    "featured": true,
+    "category": "mobile"
+  },
+  {
+    "title": "DevOps CI/CD Pipeline",
+    "description": "Automated deployment pipeline with continuous integration, testing, and delivery. Reduces deployment time by 80% with zero-downtime deployments.",
+    "image": "/projects/cicd-pipeline.png",
+    "tags": ["Jenkins", "Docker", "Kubernetes", "Terraform", "AWS", "GitHub Actions"],
+    "githubUrl": "https://github.com/MHaris404/cicd-automation",
+    "featured": false,
+    "category": "devops"
+  },
+  {
+    "title": "Data Analytics Dashboard",
+    "description": "Interactive business intelligence dashboard with real-time data visualization, customizable widgets, and automated reporting. Processes millions of data points efficiently.",
+    "image": "/projects/analytics-dashboard.png",
+    "tags": ["React", "D3.js", "Python", "FastAPI", "ClickHouse"],
+    "liveUrl": "https://analytics-dashboard.vercel.app",
+    "githubUrl": "https://github.com/MHaris404/analytics-dashboard",
+    "featured": true,
+    "category": "web"
+  },
+  {
+    "title": "Machine Learning Model API",
+    "description": "Production-ready ML model serving API with model versioning, A/B testing, and monitoring. Serves predictions with <50ms latency.",
+    "image": "/projects/ml-api.png",
+    "tags": ["Python", "FastAPI", "TensorFlow", "Docker", "MLflow"],
+    "githubUrl": "https://github.com/MHaris404/ml-model-api",
+    "featured": false,
+    "category": "ai"
+  },
+  {
+    "title": "Blockchain Voting System",
+    "description": "Decentralized voting platform using blockchain technology for transparent and tamper-proof elections. Ensures voter anonymity while maintaining audit trails.",
+    "image": "/projects/blockchain-voting.png",
+    "tags": ["Solidity", "Ethereum", "Web3.js", "React", "IPFS"],
+    "liveUrl": "https://blockchain-vote.io",
+    "githubUrl": "https://github.com/MHaris404/blockchain-voting",
+    "featured": false,
+    "category": "blockchain"
+  },
+  {
+    "title": "Social Media Content Scheduler",
+    "description": "Multi-platform social media management tool with content scheduling, analytics, and team collaboration. Supports Instagram, Twitter, LinkedIn, and Facebook.",
+    "image": "/projects/social-scheduler.png",
+    "media": "/projects/scheduler-demo.mp4",
+    "tags": ["Next.js", "Node.js", "MongoDB", "Redis", "OAuth 2.0"],
+    "liveUrl": "https://socialscheduler.app",
+    "githubUrl": "https://github.com/MHaris404/social-scheduler",
+    "featured": true,
+    "category": "web"
+  }
+]
