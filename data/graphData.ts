@@ -56,9 +56,6 @@ export const getGraphData = () => {
     const expId = `exp-${exp.company.replace(/\s+/g, '-').toLowerCase()}`;
     nodes.push({ id: expId, label: exp.company, group: 'experience', val: 12 });
     links.push({ source: 'root', target: expId });
-
-    // Try to link experience to relevant categories or skills
-    // For simplicity, link to root for now, but we could add more logic
   });
 
   // 6. Education
