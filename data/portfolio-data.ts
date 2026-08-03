@@ -1,9 +1,14 @@
+export const userName = {
+  fullName: "shahzada muhammad ahmed",
+  myName: "shahzada m ahmed"
+};
+
 export const personalInfo = {
-  name: "Muhammad Haris",
-  title: "Senior Full Stack Software Engineer",
-  subtitle: "Team Lead & Consultant - Web, Backend, Mobile Solutions",
-  email: "mharis.ksasen@gmail.com",
-  alternateEmail: "mharis96.mh@gmail.com",
+  name: "Shahzads M Ahmed",
+  title: "Senior Full Stack Software Developer",
+  subtitle: "Team Lead - Web Apps, Mobile Apps, Back-End Solutions",
+  email: "shahzada.ahmed1996@gmail.com",
+  alternateEmail: "shahzada.ahmed1996@gmail.com",
   phone: {
     ksa: "+966 568 126 523",
     pak: "+92 316 1618 404"
@@ -18,12 +23,12 @@ export const personalInfo = {
     "Explore this portfolio to discover a collection of projects showcasing my expertise in Mobile App development, cloud architecture, and modern full-stack solutions. Each project reflects my dedication to crafting efficient, user-centric, and forward-thinking solutions."
   ],
   social: {
-    linkedin: "https://www.linkedin.com/in/mharis404/",
-    github: "https://github.com/mharis404",
+    linkedin: "https://www.linkedin.com/in/shahzada-muhammad-ahmed-rana-5b15231a9",
+    github: "https://github.com/Shahzadaahmed",
     gist: "https://gist.github.com/mharis404",
-    instagram: "https://www.instagram.com/mharis404"
+    facebook: "https://www.facebook.com/Codemaster08.07.95"
   },
-  resumeLink: "https://drive.google.com/file/d/1CpPPr3Tzs_Jbt3E4KchotejcKHuKXVSA/view?usp=drive_link"
+  resumeLink: "https://flowcv.com/resume/aso4435bjsjw"
 };
 
 export const businessValue = [

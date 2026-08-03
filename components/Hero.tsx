@@ -2,23 +2,21 @@
 
 import React, { useEffect, useState, memo } from 'react';
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope, FaChevronDown } from 'react-icons/fa';
-import { personalInfo } from '@/data/portfolio-data';
+import { FaLinkedin, FaGithub, FaFacebook, FaEnvelope, FaChevronDown } from 'react-icons/fa';
+import { personalInfo, userName } from '@/data/portfolio-data';
 import Image from 'next/image';
-import { useResume } from '@/hooks/useResume';
 import ParticleBackground from '@/components/ParticleBackground';
 
 const Hero = () => {
-  const { resumeUrl } = useResume();
   const [typedText, setTypedText] = useState('');
   const [currentRole, setCurrentRole] = useState(0);
 
-  const roles = [
-    'Full Stack Developer',
-    'Mobile App Engineer',
+  const roles: string[] = [
+    'Full Stack Developer(MERN)',
+    'Mobile App Developer',
     'Team Lead',
-    'Cloud Solutions Architect',
-    'Technical Consultant'
+    'Software Development Trainer',
+    'JavaScript Enthusiast'
   ];
 
   useEffect(() => {
@@ -30,7 +28,7 @@ const Hero = () => {
         setTypedText(currentText.substring(0, charIndex));
         charIndex++;
       }
-      
+
       else {
         clearInterval(typeInterval);
         setTimeout(() => {
@@ -45,7 +43,7 @@ const Hero = () => {
   const socialLinks = [
     { icon: FaLinkedin, url: personalInfo.social.linkedin, label: 'LinkedIn', color: '#0077b5' },
     { icon: FaGithub, url: personalInfo.social.github, label: 'GitHub', color: '#333' },
-    { icon: FaInstagram, url: personalInfo.social.instagram, label: 'Instagram', color: '#E4405F' },
+    { icon: FaFacebook, url: personalInfo.social.facebook, label: 'Facebook', color: '#E4405F' },
     { icon: FaEnvelope, url: `mailto:${personalInfo.email}`, label: 'Email', color: '#EA4335' },
   ];
 
@@ -109,8 +107,11 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
               className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight"
+              style={{ textTransform: "capitalize" }}
             >
-              <span className="gradient-text">{personalInfo.name}</span>
+              <span className="gradient-text">
+                {userName?.myName}
+              </span>
             </motion.h1>
 
             <motion.div
@@ -172,7 +173,7 @@ const Hero = () => {
                 <FaChevronDown className="group-hover:animate-bounce" />
               </a>
               <a
-                href={resumeUrl || '#'}
+                href={personalInfo?.resumeLink || '#'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 rounded-full border-2 border-primary-500 text-primary-500 font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300"
@@ -234,7 +235,7 @@ const Hero = () => {
                 >
                   <div className="w-full h-full relative">
                     <Image
-                      src="/images/portfolio-image3.png"
+                      src="/images/SMA.png"
                       alt={personalInfo.name}
                       fill
                       className="object-cover"

@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useEffect , memo } from 'react';
+import { useState, useEffect, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { userName } from '@/data/portfolio-data';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,9 +58,8 @@ const Navigation = () => {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'glass-morphism shadow-lg' : 'bg-transparent'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass-morphism shadow-lg' : 'bg-transparent'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
@@ -77,8 +77,9 @@ const Navigation = () => {
                   scrollToSection('#home');
                 }}
                 className="text-xl md:text-2xl font-bold gradient-text cursor-pointer"
+                style={{ textTransform: "capitalize" }}
               >
-                Muhammad Haris
+                {userName?.myName}
               </a>
             </motion.div>
 
@@ -96,11 +97,10 @@ const Navigation = () => {
                       e.preventDefault();
                       scrollToSection(item.href);
                     }}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                      activeSection === item.href.substring(1)
-                        ? 'text-primary-500 bg-primary-500/10'
-                        : 'text-gray-300 hover:text-primary-500 hover:bg-primary-500/5'
-                    }`}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${activeSection === item.href.substring(1)
+                      ? 'text-primary-500 bg-primary-500/10'
+                      : 'text-gray-300 hover:text-primary-500 hover:bg-primary-500/5'
+                      }`}
                   >
                     {item.name}
                   </motion.a>
@@ -139,11 +139,10 @@ const Navigation = () => {
                       e.preventDefault();
                       scrollToSection(item.href);
                     }}
-                    className={`block px-3 py-2 rounded-md text-base font-medium ${
-                      activeSection === item.href.substring(1)
-                        ? 'text-primary-500 bg-primary-500/10'
-                        : 'text-gray-300 hover:text-primary-500 hover:bg-primary-500/5'
-                    }`}
+                    className={`block px-3 py-2 rounded-md text-base font-medium ${activeSection === item.href.substring(1)
+                      ? 'text-primary-500 bg-primary-500/10'
+                      : 'text-gray-300 hover:text-primary-500 hover:bg-primary-500/5'
+                      }`}
                   >
                     {item.name}
                   </a>
