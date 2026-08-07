@@ -3,6 +3,8 @@ export const userName = {
   myName: "shahzada m ahmed"
 };
 
+export const totalYearsOfExp = 5;
+
 export const personalInfo = {
   name: "Shahzads M Ahmed",
   title: "Senior Full Stack Software Developer",
@@ -11,16 +13,13 @@ export const personalInfo = {
   alternateEmail: "shahzada.ahmed1996@gmail.com",
   phone: {
     ksa: "+966 568 126 523",
-    pak: "+92 316 1618 404"
+    pak: "+92 314 2117550"
   },
   location: {
-    current: "Riyadh, Saudi Arabia",
+    current: "Karachi, Pakistan",
     origin: "Karachi, Pakistan"
   },
   bio: [
-    "I'm a Senior Software Engineer based in Riyadh, Saudi Arabia, with full legal right to work. With over five years of experience, I specialize in building robust, scalable mobile and web applications using Kotlin, React Native, and AWS, where I focus on integrating complex backend systems and ensuring high-quality delivery across CI/CD pipelines.",
-    "I've delivered engineering excellence across healthcare, digital strategy, and e-commerce platforms — working with global teams from Australia to the British Virgin Islands. I work deeply within Agile/Scrum environments, leveraging DevOps practices and AI tools like Claude AI, Llama, and Qwen to accelerate development, improve code coverage, and deliver premium user experiences.",
-    "Explore this portfolio to discover a collection of projects showcasing my expertise in Mobile App development, cloud architecture, and modern full-stack solutions. Each project reflects my dedication to crafting efficient, user-centric, and forward-thinking solutions."
   ],
   social: {
     linkedin: "https://www.linkedin.com/in/shahzada-muhammad-ahmed-rana-5b15231a9",
@@ -68,131 +67,228 @@ export const businessValue = [
 
 export const testimonials = [
   {
-    name: "Danish Amjad",
-    role: "Lead Android Engineer | Jetpack Compose & Kotlin",
-    company: "Jetpack Compose & Kotlin",
-    content: "I had the pleasure of working with Haris on Android development projects, and his expertise and problem-solving skills stood out. He is a dedicated and efficient developer, always bringing innovative solutions to the table. His ability to tackle complex challenges with ease makes him a valuable asset to any team also a very humble person.",
-    date: "March 23, 2025",
-    image: "/testimonials/danish.jpg",
-    initials: "DA"
+    name: "Romaan Hanif",
+    role: "Digital Marketing Expert",
+    company: "The Master Jackets",
+    content: "Shahzada developed a scalable eCommerce backend for our business using Node.js and MongoDB. The system was well-structured, performant, and designed to handle future growth. His technical expertise, problem-solving ability, and commitment to delivering quality solutions made him a valuable part of the project.",
+    date: "January 19, 2026",
+    initials: "RH"
   },
   {
-    name: "David Anson",
-    role: "Director, Technology Leader",
-    company: "Digital Strategy, Direction, Implementation & Transformation",
-    content: "Harris was a highly skilled developer who was able to achieve world class solutions and app code that was fast, efficient and effective. I would recommend him highly for any app development roles.",
-    date: "January 31, 2025",
-    image: "/testimonials/david.jpg",
-    initials: "DA"
+    name: "Faraz Quddusi",
+    role: "Chief Executive Officer",
+    company: "QBS Corporation Private Limited",
+    content: "Having worked with Shahzada Ahmed with more than 4 years, I must say he have outstanding software development expertise. A true leader with exceptional interpersonal skills, He excels in guiding teams to success.",
+    date: "March 16, 2026",
+    initials: "FQ"
   },
   {
-    name: "Abdul Ahad",
-    role: "UK based SQA Engineer",
-    company: "Manual + Automation + AI Testing | CI/CD",
-    content: "Having worked with Muhammad Haris for a year, I must say he have outstanding mobile app development expertise. A true leader with exceptional interpersonal skills, He excels in guiding teams to success.",
-    date: "November 20, 2023",
-    image: "/testimonials/abdul.jpg",
-    initials: "AA"
-  }
+    name: "Bilal Ur Rehman",
+    role: "Senior Software Engineer",
+    company: "QBS Corporation Private Limited",
+    content: "Ahmed was a highly skilled developer who was able to achieve world class solutions and app code that was fast, efficient and effective. I would recommend him highly for any web & app development roles.",
+    date: "July 2, 2026",
+    initials: "BR"
+  },
+  {
+    name: "Zeeshan Aijaz",
+    role: "Academics Lead",
+    company: "Saylani Welfare International Trust",
+    content: "Shahzada has been an exceptional Software Development Trainer at Saylani. His ability to simplify complex programming concepts, mentor students with patience, and provide hands-on industry guidance has helped many learners build strong development skills. He is passionate about teaching and always encourages students to follow modern software engineering best practices.",
+    date: "August 3, 2026",
+    initials: "ZA"
+  },
 ];
 
 export const education = [
   {
-    degree: "5-Day AI Agents Intensive (Agentic Engineering & Vibe Coding)",
-    institution: "Google & Kaggle",
-    year: "June 2026",
-    image: "/images/kaggle.jpg"
+    degree: "Certified Modern Web & App Development",
+    institution: "Saylani Welfare International Trust",
+    year: "2019 - 2020"
   },
   {
-    degree: "AWS Solution Architect Associate",
-    institution: "Amazon Web Services",
-    year: "March 2025",
-    image: "/images/aws.jpg"
+    degree: "Web Designing & Development",
+    institution: "Institute of Business Administration (IBA)",
+    year: "2017"
   },
   {
     degree: "Bachelor of Science in Computer Science",
-    institution: "Sir Syed University of Engineering and Technology",
-    period: "2017 – 2020",
-    image: "/images/college.jpg"
-  },
-  {
-    degree: "Chartered Accountant - AFC Module",
-    institution: "Institute of Chartered Accountant of Pakistan",
-    period: "2016 – 2016",
-    image: "/images/icap.jpg"
+    institution: "Hamdard University",
+    period: "2016 - 2020"
   },
   {
     degree: "HSC | Pre Engineering",
-    institution: "ASF Intermediate College | Karachi",
-    period: "2014 – 2015",
-    image: "/images/school.jpg"
-  }
+    institution: "Pakistan Shipowners Government College",
+    period: "2014 - 2015"
+  },
+  {
+    degree: "SSC | Computer Science",
+    institution: "Shaheen Cambridge School",
+    period: "2000 - 2013"
+  },
 ];
 
 export const experience = [
   {
-    company: "Qyser",
-    position: "Senior Full Stack Software Engineer",
+    company: "Saylani Welfare International Trust",
+    position: "Software Development Trainer",
+    type: "Part Time",
+    location: "Karachi, Pakistan",
+    period: "June 2024 - Present",
+    description:
+      "Designed and delivered practical MERN Stack and React Native training programs for 100+ students. Developed course materials, conducted code reviews, mentored students, and prepared them for technical interviews and industry-ready development."
+  },
+  {
+    company: "QBS Corporation Private Limited",
+    position: "Sr. Software Engineer (MERN Stack)",
     type: "Permanent",
-    location: "Riyadh",
-    period: "September 2025 - Present",
-    description: "Leading full-stack development initiatives and mentoring junior developers."
+    location: "Karachi, Pakistan",
+    period: "May 2021 - Aug 2026",
+    description:
+      "Led full-stack development using React, Next.js, TypeScript, Node.js, Express.js, and MongoDB. Built secure REST APIs, implemented JWT authentication, improved CI/CD workflows, mentored junior developers, and collaborated with cross-functional teams."
   },
   {
-    company: "Fliz (Rental)",
-    position: "Consultant",
-    type: "Part Time - Remote",
-    location: "Riyadh",
-    period: "July 2025 - Present",
-    description: "Providing technical consulting for rental platform development."
+    company: "Tech Zone Learning Institute",
+    position: "Lead Trainer (Software Development)",
+    type: "Part Time",
+    location: "Karachi, Pakistan",
+    period: "July 2022 - July 2024",
+    description:
+      "Delivered hands-on training in MERN Stack and React Native, created practical assignments and capstone projects, conducted code reviews, and guided students in software development best practices."
   },
   {
-    company: "PureSquare (Disrupt) | GZ Systems",
-    position: "Associate Android Developer",
-    type: "Contract - Remote",
-    location: "Karachi",
-    period: "June 2024 - February 2025",
-    description: "Developed Android applications with modern architecture patterns."
+    company: "Hash Buckets (US Based Software House)",
+    position: "Front-End Developer (React JS & React Native)",
+    type: "Permanent",
+    location: "Karachi, Pakistan",
+    period: "March 2021 - May 2021",
+    description:
+      "Developed responsive React and React Native applications, integrated REST APIs, optimized application performance, improved state management, and collaborated with designers to deliver production-ready user interfaces."
   },
   {
-    company: "Jamweb Services Australia",
-    position: "Team Lead & Full Stack Mobile Application Engineer",
-    type: "Permanent - Hybrid",
-    location: "Karachi",
-    period: "January 2023 - January 2025",
-    description: "Led mobile development team and delivered cross-platform solutions."
-  },
-  {
-    company: "QBS Co",
-    position: "Associate Software Engineer",
-    type: "Permanent - Hybrid + Forward Deployed",
-    location: "Karachi",
-    period: "December 2020 - January 2023",
-    description: "Built enterprise software solutions and provided on-site technical support."
+    company: "DigitalWaze (US Based Software House)",
+    position: "Front-End Developer (React JS & React Native)",
+    type: "Permanent",
+    location: "Karachi, Pakistan",
+    period: "January 2021 - February 2021",
+    description:
+      "Built reusable React and React Native components, integrated REST APIs, resolved bugs, performed cross-platform testing, and worked closely with senior engineers to deliver high-quality web and mobile applications."
   }
 ];
 
 export const skills = [
-  { name: "Agentic Engineering", icon: "https://img.icons8.com/color/48/000000/bot.png" },
-  { name: "Java", icon: "/skills/java.png" },
-  { name: "Kotlin", icon: "/skills/kotlin.png" },
-  { name: "React Native", icon: "/skills/reactnative.png" },
-  { name: "AWS", icon: "/skills/awssaa.png" },
-  { name: "ASP .NET Web API", icon: "/skills/aspwebapi.jpg" },
-  { name: "Node.js", icon: "/skills/node.png" },
-  { name: "Kotlin Compose", icon: "/skills/compose.png" },
-  { name: "React.js", icon: "/skills/react.png" },
-  { name: "Next.js", icon: "/skills/reactjs.png" },
-  { name: "Docker", icon: "/skills/docker.png" },
-  { name: "MsSQL", icon: "/skills/mssql.png" },
-  { name: "Redux", icon: "/skills/redux.png" },
-  { name: "Room", icon: "/skills/room.png" },
-  { name: "Supabase", icon: "/skills/supabase.png" },
-  { name: "MongoDB", icon: "https://img.icons8.com/color/48/000000/mongodb.png" },
-  { name: "JavaScript", icon: "https://img.icons8.com/color/48/000000/javascript--v1.png" },
-  { name: "GitHub", icon: "https://img.icons8.com/glyph-neue/48/ffffff/github.png" },
-  { name: "Play Store", icon: "/skills/playstore.jpg" },
-  { name: "App Store", icon: "/skills/appstore.png" }
+  {
+    name: "HTML5",
+    icon: "https://img.icons8.com/color/48/html-5--v1.png",
+  },
+  {
+    name: "CSS3",
+    icon: "https://img.icons8.com/color/48/css3.png",
+  },
+  {
+    name: "Bootstrap",
+    icon: "https://img.icons8.com/color/48/bootstrap.png",
+  },
+  {
+    name: "JavaScript (ES6+)",
+    icon: "https://img.icons8.com/color/48/javascript--v1.png",
+  },
+  {
+    name: "TypeScript",
+    icon: "https://img.icons8.com/color/48/typescript.png",
+  },
+  {
+    name: "React.js",
+    icon: "https://img.icons8.com/color/48/react-native.png",
+  },
+  {
+    name: "Next.js",
+    icon: "https://img.icons8.com/color/48/nextjs.png",
+  },
+  {
+    name: "React Native",
+    icon: "https://img.icons8.com/color/48/react-native.png",
+  },
+  {
+    name: "Redux Toolkit",
+    icon: "https://img.icons8.com/color/48/redux.png",
+  },
+  {
+    name: "Node.js",
+    icon: "https://img.icons8.com/color/48/nodejs.png",
+  },
+  {
+    name: "Express.js",
+    icon: "https://img.icons8.com/color/48/express-js.png",
+  },
+  {
+    name: "MongoDB",
+    icon: "https://img.icons8.com/color/48/mongodb.png",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "https://img.icons8.com/color/48/postgreesql.png",
+  },
+  {
+    name: "RESTful APIs",
+    icon: "https://img.icons8.com/color/48/api-settings.png",
+  },
+  {
+    name: "JWT & OAuth",
+    icon: "https://img.icons8.com/color/48/lock--v1.png",
+  },
+  {
+    name: "Git",
+    icon: "https://img.icons8.com/color/48/git.png",
+  },
+  {
+    name: "GitHub",
+    icon: "https://img.icons8.com/glyph-neue/48/ffffff/github.png",
+  },
+  {
+    name: "Mantine UI",
+    icon: "https://img.icons8.com/color/48/design.png",
+  },
+  {
+    name: "Material UI",
+    icon: "https://img.icons8.com/color/48/material-ui.png",
+  },
+  {
+    name: "Firebase",
+    icon: "https://img.icons8.com/color/48/firebase.png",
+  },
+  {
+    name: "Cloudinary",
+    icon: "https://img.icons8.com/color/48/cloud.png",
+  },
+  {
+    name: "Docker",
+    icon: "https://img.icons8.com/color/48/docker.png",
+  },
+  {
+    name: "MVC Architecture",
+    icon: "https://img.icons8.com/color/48/flow-chart.png",
+  },
+  {
+    name: "Event-Driven Architecture",
+    icon: "https://img.icons8.com/color/48/data-configuration.png",
+  },
+  {
+    name: "System Design",
+    icon: "https://img.icons8.com/color/48/network.png",
+  },
+  {
+    name: "ChatGPT",
+    icon: "https://img.icons8.com/color/48/chatgpt.png",
+  },
+  {
+    name: "Prompt Engineering",
+    icon: "https://img.icons8.com/color/48/artificial-intelligence.png",
+  },
+  {
+    name: "AI-assisted Development",
+    icon: "https://img.icons8.com/color/48/bot.png",
+  },
 ];
 
 export const projects = [

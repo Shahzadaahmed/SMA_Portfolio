@@ -3,16 +3,16 @@
 import { useEffect, useRef, memo } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { skills } from '@/data/portfolio-data';
+import { skills, totalYearsOfExp } from '@/data/portfolio-data';
 import Image from 'next/image';
 import { animate, createScope } from 'animejs';
 
 // ─── Stat data ────────────────────────────────────────────────────────────────
 const STATS = [
-  { target: 5, suffix: '+', label: 'Years Experience' },
+  { target: totalYearsOfExp, suffix: '+', label: 'Years Experience' },
   { target: 6, suffix: '+', label: 'Technologies' },
-  { target: 11, suffix: '+', label: 'Projects Completed' },
-  { target: 95, suffix: '%', label: 'Client Satisfaction' },
+  { target: 50, suffix: '+', label: 'Projects Completed' },
+  { target: 90, suffix: '%', label: 'Client Satisfaction' },
 ];
 
 // ─── Framer Motion variants ───────────────────────────────────────────────────

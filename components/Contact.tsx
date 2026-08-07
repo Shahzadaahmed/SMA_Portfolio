@@ -4,7 +4,7 @@ import { useState, memo } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { personalInfo } from '@/data/portfolio-data';
-import { FaEnvelope, FaPhone, FaWhatsapp, FaPaperPlane } from 'react-icons/fa';
+import { FaEnvelope, FaWhatsapp, FaPaperPlane } from 'react-icons/fa';
 // emailjs-com is imported dynamically inside handleSubmit to avoid SSR crashes
 
 const Contact = () => {
@@ -135,23 +135,6 @@ const Contact = () => {
                   </div>
                 </motion.a>
 
-                {/* WhatsApp KSA */}
-                <motion.a
-                  href={`https://wa.me/${personalInfo.phone.ksa.replace(/[^0-9]/g, '')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ x: 10 }}
-                  className="flex items-center gap-4 p-4 rounded-xl glass-morphism hover:border-primary-500/50 transition-all"
-                >
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center flex-shrink-0">
-                    <FaWhatsapp className="text-white text-xl" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-400">WhatsApp (KSA)</p>
-                    <p className="text-white font-medium">{personalInfo.phone.ksa}</p>
-                  </div>
-                </motion.a>
-
                 {/* WhatsApp PAK */}
                 <motion.a
                   href={`https://wa.me/${personalInfo.phone.pak.replace(/[^0-9]/g, '')}`}
@@ -191,6 +174,7 @@ const Contact = () => {
                     required
                     className="w-full px-4 py-3 rounded-lg bg-surface border border-gray-700 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all text-white"
                     placeholder="John Doe"
+                    style={{ color: 'black' }}
                   />
                 </div>
 
@@ -207,6 +191,7 @@ const Contact = () => {
                     required
                     className="w-full px-4 py-3 rounded-lg bg-surface border border-gray-700 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all text-white"
                     placeholder="john@example.com"
+                    style={{ color: 'black' }}
                   />
                 </div>
 
@@ -223,6 +208,7 @@ const Contact = () => {
                     rows={6}
                     className="w-full px-4 py-3 rounded-lg bg-surface border border-gray-700 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all text-white resize-none"
                     placeholder="Your message here..."
+                    style={{ color: 'black' }}
                   />
                 </div>
 

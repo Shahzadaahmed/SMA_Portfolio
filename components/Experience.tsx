@@ -94,8 +94,7 @@ const Experience = () => {
                     initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.6, delay: index * 0.2 }}
-                    className={`relative grid md:grid-cols-2 gap-8 items-center ${index % 2 === 0 ? '' : 'md:direction-rtl'
-                      }`}
+                    className={`relative grid md:grid-cols-2 gap-8 items-center ${index % 2 === 0 ? '' : 'md:direction-rtl'}`}
                   >
                     {/* Content card */}
                     <div className={`${index % 2 === 0 ? 'md:text-right' : 'md:text-left md:col-start-2'}`}>
@@ -104,13 +103,13 @@ const Experience = () => {
                           <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-accent flex items-center justify-center">
                             <FaBriefcase className="text-white text-xl" />
                           </div>
-                          <div className="flex-1">
+                          <div className="flex-1" style={{ textAlign: "left" }}>
                             <h3 className="text-xl font-bold text-white">{exp.company}</h3>
                             <p className="text-sm text-gray-400">{exp.type}</p>
                           </div>
                         </div>
 
-                        <h4 className="text-lg font-semibold text-primary-500 mb-3">
+                        <h4 className="text-lg font-semibold text-primary-500 mb-3" style={{ textAlign: "left" }}>
                           {exp.position}
                         </h4>
 
@@ -125,7 +124,7 @@ const Experience = () => {
                           </div>
                         </div>
 
-                        <p className="text-gray-400 leading-relaxed">{exp.description}</p>
+                        <p className="text-gray-400 leading-relaxed" style={{ textAlign: "left" }}>{exp.description}</p>
                       </div>
                     </div>
 

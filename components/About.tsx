@@ -3,13 +3,11 @@
 import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { personalInfo } from '@/data/portfolio-data';
+import { personalInfo, userName } from '@/data/portfolio-data';
 import { FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 import Image from 'next/image';
-import { useResume } from '@/hooks/useResume';
 
 const About = () => {
-  const { resumeUrl } = useResume();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -43,8 +41,8 @@ const About = () => {
                 <div className="relative rounded-2xl overflow-hidden glass-morphism p-2">
                   <div className="relative w-full h-96 rounded-xl overflow-hidden shadow-2xl">
                     <Image
-                      src="/images/portfolio-image4.png"
-                      alt={personalInfo.name}
+                      src="/images/SMA.png"
+                      alt={userName?.fullName}
                       fill
                       className="object-cover"
                     />
@@ -68,7 +66,9 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="space-y-6"
             >
-              <h3 className="text-3xl font-bold">I&apos;m {personalInfo.name}</h3>
+              <h3 className="text-3xl font-bold" style={{ textTransform: "capitalize" }}>
+                I&apos;m {userName?.fullName}
+              </h3>
               <p className="text-xl text-primary-500 font-semibold">{personalInfo.title}</p>
 
               <div className="space-y-4 text-gray-400 leading-relaxed">
@@ -77,7 +77,7 @@ const About = () => {
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.6 }}
                 >
-                  I&apos;m a Senior Software Engineer based in Riyadh, KSA, with full legal right to work. With over five years of experience, I specialize in building robust, scalable mobile and web applications using Java, Kotlin, React Native, React, Nodejs and Nestjs, and AWS, where I focus on integrating complex backend systems and ensuring high-quality delivery across CI/CD pipelines.
+                  I&apos;m a Senior Full Stack MERN Developer with 5+ years of experience delivering scalable, high-performance web and mobile applications across the entire software development lifecycle. Proficient in React.js, Next.js, Node.js, Express.js, MongoDB, React Native, and TypeScript, with expertise in designing robust system architectures, developing secure REST APIs, and building intuitive, production-ready user experiences.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -130,7 +130,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 1.1 }}
               >
                 <a
-                  href={resumeUrl || personalInfo.resumeLink}
+                  href={personalInfo.resumeLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary inline-block"

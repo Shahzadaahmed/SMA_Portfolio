@@ -2,8 +2,8 @@
 
 import React, { memo } from 'react';
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope, FaHeart, FaArrowUp } from 'react-icons/fa';
-import { personalInfo } from '@/data/portfolio-data';
+import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope, FaHeart, FaArrowUp, FaFacebook } from 'react-icons/fa';
+import { personalInfo, userName } from '@/data/portfolio-data';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -23,7 +23,7 @@ const Footer = () => {
   const socialLinks = [
     { icon: FaLinkedin, url: personalInfo.social.linkedin, label: 'LinkedIn' },
     { icon: FaGithub, url: personalInfo.social.github, label: 'GitHub' },
-    { icon: FaInstagram, url: personalInfo.social.instagram, label: 'Instagram' },
+    { icon: FaFacebook, url: personalInfo.social.facebook, label: 'Facebook' },
     { icon: FaEnvelope, url: `mailto:${personalInfo.email}`, label: 'Email' },
   ];
 
@@ -33,7 +33,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* About Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold gradient-text">Muhammad Haris</h3>
+            <h3
+              className="text-2xl font-bold gradient-text"
+              style={{ textTransform: "capitalize" }}
+            >
+              {userName?.fullName}
+            </h3>
             <p className="text-gray-400 leading-relaxed">
               Thank you for visiting my portfolio. Connect with me on social media or reach out for collaboration opportunities.
             </p>
@@ -64,7 +69,7 @@ const Footer = () => {
             <ul className="space-y-3 text-gray-400">
               <li className="flex items-start gap-2">
                 <span className="text-primary-500 mt-1">📞</span>
-                <span>{personalInfo.phone.ksa}</span>
+                <span>{personalInfo.phone.pak}</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary-500 mt-1">✉️</span>
@@ -98,20 +103,21 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-center md:text-left">
-              © {new Date().getFullYear()} Muhammad Haris. Designed with{' '}
+              © {new Date().getFullYear()} Shahzada M Ahmed. Designed with{' '}
               <FaHeart className="inline text-red-500 animate-pulse" /> by{' '}
               <a
                 href={personalInfo.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-500 hover:underline"
+                style={{ textTransform: "capitalize" }}
               >
-                Muhammad Haris
+                {userName?.fullName}
               </a>
             </p>
 
             <p className="text-gray-500 text-sm">
-              Built with Next.js, React, TailwindCSS & Framer Motion
+              Built with React JS, Next JS, TailwindCSS & Framer Motion
             </p>
           </div>
         </div>
