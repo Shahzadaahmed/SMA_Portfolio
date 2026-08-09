@@ -33,7 +33,7 @@ export const getGraphData = () => {
   projectsJson.forEach((p: any) => {
     const projectId = `proj-${p.name.replace(/\s+/g, '-').toLowerCase()}`;
     nodes.push({ id: projectId, label: p.name, group: 'project', val: 10 });
-    
+
     // Link project to its main category
     let catId = 'cat-Web';
     if (p.category?.includes('mobile')) catId = 'cat-Mobile';

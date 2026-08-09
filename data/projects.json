@@ -1,6 +1,6 @@
 [
   {
-    "name": "Shaker Care",
+    "name": "Shaker Care App",
     "desc": "A React Native mobile application for Shaker Group that enables customers to request product services and installations, submit complaints, explore and purchase products, and connect with customer support through WhatsApp.",
     "image": "shaker-care-project",
     "image_format": "webp",
@@ -20,7 +20,7 @@
     }
   },
   {
-    "name": "Vibe",
+    "name": "Vibe App",
     "desc": "A cross-platform React Native shopping application developed for PSO petrol stations, enabling customers to browse and order convenience-store products through self-pickup or home delivery. The app provides location-based store selection and supports multiple payment options, including Cash on Delivery and DigiCash. Built with React Native, Redux, JavaScript, and Firebase to deliver a smooth and scalable mobile shopping experience across Android and iOS.",
     "image": "vibe",
     "image_format": "webp",
@@ -40,7 +40,27 @@
     }
   },
   {
-    "name": "Vibe Web App",
+    "name": "Blue App",
+    "desc": "A mobile LPG delivery and order-management application built to digitize the customer ordering experience. The app supports LPG cylinder ordering, recurring subscription management, real-time order tracking, delivery status updates, and account management, providing a streamlined solution for customers and delivery operations.",
+    "image": "blue",
+    "image_format": "webp",
+    "category": "mobile_reactnative",
+    "SubCategory": "fullstack_mobileapp",
+    "tags": [
+      "mobile",
+      "android",
+      "ios",
+      "react-native",
+      "javascript",
+      "redux",
+      "firebase"
+    ],
+    "links": {
+      "view": "https://play.google.com/store/apps/details?id=com.pso_customer_app&hl=en"
+    }
+  },
+  {
+    "name": "Vibe Web Portal",
     "desc": "VIBE is a comprehensive retail and e-commerce management platform designed to manage the complete lifecycle of convenience-store operations. The web-based admin dashboard provides centralized management of products, stores, orders, customers, discounts, vouchers, complaints, transactions, partnerships, banners, and store feedback. It also includes real-time business analytics with revenue tracking, monthly sales trends, sales growth, top-performing products, and customer/order statistics, enabling administrators to monitor and optimize overall store performance.",
     "image": "vibe-web",
     "image_format": "jpeg",
@@ -64,106 +84,66 @@
     }
   },
   {
-    "name": "Vapi Voice Assistant",
-    "desc": "A full-stack conversational AI platform featuring low-latency voice agents. Integrates an interactive web interface with a backend webhook/API processor to handle real-time audio streams, conversational state synchronization, dynamic tool-calling, and custom assistant configuration.",
-    "image": "vapi",
-    "image_format": "png",
-    "category": "web",
-    "SubCategory": "fullstack_web",
-    "tags": [
-      "react",
-      "nextjs",
-      "nodejs",
-      "express",
-      "vapi",
-      "ai",
-      "websocket",
-      "typescript",
-      "tailwind"
-    ],
-    "links": {
-      "view": "https://vapi-frontend-beta.vercel.app/",
-      "code": "Code can't be viewed."
-    }
-  },
-  {
-    "name": "Qyser Medical Portal",
-    "desc": "MERN stack based medical portal with separate frontend landing and secure dashboard system. Includes patient management, workflows, and role-based access. <br> Landing: https://qyser-landing1.vercel.app/ <br> Dashboard: https://dashboard-dev.qyser.xyz/",
-    "image": "qyser",
-    "image_format": "png",
+    "name": "Neuconnect - Master Oil",
+    "desc": "A comprehensive warehouse Track & Trace management system designed to streamline production, inventory, warehouse, and dispatch operations. The platform enables organizations to monitor production lines, manage production orders, track bottles, cartons and pallets, assign warehouses and handling units, generate barcodes, and manage sales and delivery orders. It provides centralized operational dashboards with real-time production, warehouse, and dispatch metrics, helping teams maintain end-to-end visibility and traceability across the supply chain.",
+    "image": "master-oil",
+    "image_format": "jpeg",
     "category": "web",
     "SubCategory": "fullstack_web_mobileapps",
     "tags": [
+      "typescript",
+      "javascript",
       "react",
       "nodejs",
-      "mongodb",
-      "express",
-      "tailwind",
+      "redux",
+      "mantine ui",
       "react-native",
-      "typescript",
-      "android",
-      "ios",
-      "hybrid",
-      "mobile",
       "web",
-      "chatbot",
-      "ollama",
-      "messaging",
-      "docker"
-    ],
-    "links": {
-      "view": "https://qyser-landing1.vercel.app/",
-      "code": "Code can't be viewed."
-    }
-  },
-  {
-    "name": "Zorex Rheumatology App",
-    "desc": "Cross-platform mobile Fintech app built with React Native, NestJS (TypeScript), and PostgreSQL. Designed for rheumatology workflows and patient interaction. <br> Deployed on Android and iOS (currently not publicly available).",
-    "image": "zorex",
-    "image_format": "png",
-    "category": "mobile_reactnative",
-    "SubCategory": "fullstack_mobileapps_adminportal",
-    "tags": [
-      "nextjs",
-      "nestjs",
+      ".net",
       "postgresql",
-      "express",
-      "tailwind",
-      "react-native",
-      "typescript",
-      "android",
-      "ios",
-      "hybrid",
-      "mobile",
-      "web",
-      "fintech",
-      "payments",
-      "ecommerce"
+      "ci/cd"
     ],
     "links": {
-      "view": "https://play.google.com/store/apps/details?id=com.rheumconsultant.zorex",
-      "code": "Code can't be viewed."
+      "view": "http://163.61.91.152:32179"
     }
   },
   {
-    "name": "Mern_Mono_Docker_Stages",
-    "desc": "MERN Stact, Docker for both development and production environments",
-    "image": "mern_docker",
-    "image_format": "webp",
+    "name": "QBS Website",
+    "desc": "A modern responsive corporate website for QBS Co., showcasing its digital transformation services, AI and automation solutions, enterprise technologies, products, clients, and global capabilities. Built with React, Next.js, JavaScript, Material UI, and Bootstrap.",
+    "image": "qbs-web",
+    "image_format": "jpeg",
     "category": "web",
-    "SubCategory": "fullstack_web",
+    "SubCategory": "frontend_only_web",
     "tags": [
-      "nodejs",
-      "mongodb",
-      "express",
-      "tailwind",
-      "react-native",
-      "typescript",
-      "docker"
+      "html",
+      "css",
+      "bootstrap",
+      "materialui",
+      "javascript",
+      "react",
+      "nextjs"
     ],
     "links": {
-      "view": "https://github.com/MHaris404/mern-mono-docker-stages",
-      "code": "https://github.com/MHaris404/mern-mono-docker-stages"
+      "view": "https://qbsco.net"
+    }
+  },
+  {
+    "name": "NOQ Website",
+    "desc": "NOQ is a virtual queue and appointment management platform designed to eliminate physical waiting and streamline service access. The platform allows users to book appointments, join virtual queues, track their position and estimated waiting time, and receive appointment alerts. It supports multiple service industries including healthcare, public facilitation centers, embassies, entertainment, lifestyle services, and event management.",
+    "image": "noq",
+    "image_format": "jpeg",
+    "category": "web",
+    "SubCategory": "frontend_only_web",
+    "tags": [
+      "html",
+      "css",
+      "bootstrap",
+      "materialui",
+      "javascript",
+      "react"
+    ],
+    "links": {
+      "view": "https://noqhub.com"
     }
   },
   {
@@ -186,246 +166,6 @@
     "links": {
       "view": "https://github.com/mharis404/Nodejs-Mono-to-Micro-Architecure",
       "code": "https://github.com/mharis404/Nodejs-Mono-to-Micro-Architecure"
-    }
-  },
-  {
-    "name": "Squickle",
-    "desc": "Freelance react web app, Entity Resource Planning system involving Planning, multi-level Purchase Order Auhtorization, Procurement and Management system",
-    "image": "squicle",
-    "image_format": "png",
-    "category": "web",
-    "SubCategory": "fullstack_web",
-    "tags": [
-      "react",
-      "nodejs",
-      "mongodb",
-      "express",
-      "tailwind",
-      "typescript",
-      "web"
-    ],
-    "links": {
-      "view": "https://squicle-dashboard.vercel.app/login",
-      "code": "Code can't be viewed."
-    }
-  },
-  {
-    "name": "Portfolio Website",
-    "desc": "Personal portfolio website. Don't need much info about it, just scroll down. You're here already!",
-    "image": "favhand",
-    "image_format": "png",
-    "category": "web",
-    "SubCategory": "frontend_only_web",
-    "tags": [
-      "html",
-      "css",
-      "js",
-      "web"
-    ],
-    "links": {
-      "view": "https://mharis404.github.io/Portfolio/",
-      "code": "https://github.com/mharis404/Portfolio/"
-    }
-  },
-  {
-    "name": "n8n RAG Docker Desktop",
-    "desc": "A self-built pipeline that automates short-form video creation and publishing using n8n, custom agents, and AI moderation. Integrated with YouTube and Facebook Reels for seamless, platform-safe content delivery. <a href=\"https://www.youtube.com/@TensionsUnfolded\" target=\"_blank\">Youtube</a>.",
-    "image": "n8n",
-    "image_format": "png",
-    "category": "n8n",
-    "SubCategory": "workflow_automation",
-    "tags": [
-      "n8n",
-      "docker",
-      "ai",
-      "web",
-      "chatbot",
-      "ollama",
-      "messaging"
-    ],
-    "links": {
-      "view": "https://www.youtube.com/@TensionsUnfolded",
-      "code": "Code can't be viewed."
-    }
-  },
-  {
-    "name": "VPN Android App",
-    "desc": "A Virtual Private Network secure Android Native app - NDA Signed. <br> Worked on this project as an associate Android Developer during my tenure with <a href=\"https://www.linkedin.com/company/puresquarecom/\" target=\"_blank\">PureSquare</a>.",
-    "image": "frog",
-    "image_format": "png",
-    "category": "mobile_native",
-    "SubCategory": "frontend_only_mobileapp_native",
-    "tags": [
-      "android",
-      "kotlin",
-      "mobile",
-      "vpn",
-      "security",
-      "cybersecurity",
-      "playstore"
-    ],
-    "links": {
-      "view": "https://www.purevpn.com/",
-      "code": "Code can't be viewed."
-    }
-  },
-  {
-    "name": "VPN Android App",
-    "desc": "A Virtual Private Network secure Android Native app - NDA Signed. <br> Worked on this project as an associate Android Developer during my tenure with <a href=\"https://www.linkedin.com/company/puresquarecom/\" target=\"_blank\">PureSquare</a>.",
-    "image": "safekay",
-    "image_format": "png",
-    "category": "mobile_native",
-    "SubCategory": "frontend_only_mobileapp_native",
-    "tags": [
-      "android",
-      "kotlin",
-      "mobile",
-      "vpn",
-      "security",
-      "cybersecurity",
-      "playstore"
-    ],
-    "links": {
-      "view": "https://www.purevpn.com/",
-      "code": "Code can't be viewed."
-    }
-  },
-  {
-    "name": "Caary",
-    "desc": "Freelance React based web app, The Caary Business Mastercard® gives you complete control over spending and automates your expense management.",
-    "image": "caaryfintech",
-    "image_format": "png",
-    "category": "web",
-    "SubCategory": "fullstack_web",
-    "tags": [
-      "react",
-      "nodejs",
-      "mongodb",
-      "express",
-      "tailwind",
-      "typescript",
-      "web",
-      "fintech",
-      "payments",
-      "ecommerce"
-    ],
-    "links": {
-      "view": "https://fintech-dashboard-bh.vercel.app/",
-      "code": "Code can't be viewed."
-    }
-  },
-  {
-    "name": "Morinaga Calorie Counter",
-    "desc": "ultimate companion for tracking daily calorie intake effortlessly. <br> Worked on this project as a freelancer for a short period, <a href=\"https://play.google.com/store/apps/details?id=com.morinaga&hl=en\" target=\"_blank\">Play Store</a>",
-    "image": "morinaga",
-    "image_format": "png",
-    "category": "mobile_reactnative",
-    "SubCategory": "frontend_only_mobileapp_hybrid",
-    "tags": [
-      "react-native",
-      "typescript",
-      "android",
-      "hybrid",
-      "mobile",
-      "playstore"
-    ],
-    "links": {
-      "view": "https://play.google.com/store/apps/details?id=com.morinaga&hl=en",
-      "code": "Code can't be viewed."
-    }
-  },
-  {
-    "name": "Hprime",
-    "desc": "Prevocational Medical Training Management Software. <br> Worked on this project as a senior software engineer during my tenure with <a href=\"https://www.linkedin.com/company/jam-web-services/\" target=\"_blank\">JAM Web Services</a>, <a href=\"https://hospital.hprime.com.au/Login.aspx?ReturnUrl=%2fGeneral%2fDashboard.aspx\" target=\"_blank\">HPrime Web</a> , and Mobile deployed on <a href=\"https://apps.apple.com/us/app/h-prime/id1507902969\" target=\"_blank\">App Store</a> and <a href=\"https://play.google.com/store/apps/details?id=jamweb.hprime&hl=en\" target=\"_blank\">Play Store</a>",
-    "image": "hprime",
-    "image_format": "png",
-    "category": "mobile_reactnative",
-    "SubCategory": "fullstack_mobileapps",
-    "tags": [
-      "react-native",
-      "typescript",
-      "android",
-      "ios",
-      "hybrid",
-      "mobile",
-      "playstore",
-      "appstore",
-      "c#",
-      ".net",
-      "mssql",
-      "azure"
-    ],
-    "links": {
-      "view": "https://www.hprime.com.au/",
-      "code": "Code can't be viewed."
-    }
-  },
-  {
-    "name": "lambkinz",
-    "desc": "lambkinz: Storytelling and learning platforms. <br> Worked on this project as a mobile engineer during my tenure with <a href=\"https://www.linkedin.com/company/jam-web-services/\" target=\"_blank\">JAM Web Services</a>, deployed on <a href=\"https://apps.apple.com/in/app/lambkinz/id1575848939\" target=\"_blank\">App Store</a> and <a href=\"https://play.google.com/store/apps/details?id=com.gastudio.lambkinz&hl=en&pli=1\" target=\"_blank\">Play Store</a>",
-    "image": "lambkinz",
-    "image_format": "png",
-    "category": "mobile_flutter",
-    "SubCategory": "frontend_only_mobileapp_hybrid",
-    "tags": [
-      "flutter",
-      "dart",
-      "android",
-      "ios",
-      "hybrid",
-      "mobile",
-      "playstore",
-      "appstore"
-    ],
-    "links": {
-      "view": "https://lambkinz.pk/",
-      "code": "Code can't be viewed."
-    }
-  },
-  {
-    "name": "zDigit",
-    "desc": "A mobile solution designed to simplify and accelerate purchase order approvals. <br> Worked on this project as a Full Stack Mobile Engineer during my tenure with <a href=\"https://www.linkedin.com/company/qbscopvtltd/mycompany/\" target=\"_blank\">QBS Co Pvt Ltd</a>.",
-    "image": "zdigit",
-    "image_format": "png",
-    "category": "mobile_reactnative",
-    "SubCategory": "fullstack_mobileapp",
-    "tags": [
-      "react-native",
-      "javascript",
-      "android",
-      "ios",
-      "hybrid",
-      "mobile",
-      "playstore",
-      "appstore",
-      "nodejs",
-      "mysql",
-      "express"
-    ],
-    "links": {
-      "view": "https://falcon.zdigits.pk/",
-      "code": "Code can't be viewed."
-    }
-  },
-  {
-    "name": "Yunus Textile Mills",
-    "desc": "YTM - IoT based Supply Chain Management System in Pakistan. <br> Worked on this project as a primary Mobile Engineer during my tenure with <a href=\"https://www.linkedin.com/company/qbscopvtltd/mycompany/\" target=\"_blank\">QBS Co Pvt Ltd</a>. <br> integated with <a href=\"https://www.cipherlab.com/en/download-c2039/RK25.html\" target=\"_blank\">Cipherlab RK25</a> used as portable Handheld device and integated with <a href=\"https://www.impinj.com/products/readers/impinj-r700\" target=\"_blank\">Impinj R700</a> used as fixed gated Gantry device, <a href=\"https://drive.google.com/file/d/1K2Uzbd_g5E6fLVe_xXYhELb29jcCyCaS/view?usp=sharing\" target=\"_blank\">Media files</a>",
-    "image": "ytm3",
-    "image_format": "png",
-    "category": "mobile_native",
-    "SubCategory": "fullstackfrontend_only_mobileapp_native_mobileapps",
-    "tags": [
-      "mobile",
-      "android",
-      "native",
-      "mobile",
-      "java",
-      "iot",
-      "rfid"
-    ],
-    "links": {
-      "view": "https://www.yunustextile.com/",
-      "code": "Code can't be viewed."
     }
   }
 ]
