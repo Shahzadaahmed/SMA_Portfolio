@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useMemo , memo } from 'react';
+import { useState, useMemo, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaExternalLinkAlt, FaGithub, FaTimes, FaFilter } from 'react-icons/fa';
 import { MdLayersClear } from 'react-icons/md';
 import Image from 'next/image';
 import rawProjects from '@/data/projects.json';
+import { personalInfo } from '@/data/portfolio-data';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface Project {
@@ -25,10 +26,7 @@ const CATEGORY_META: Record<string, { label: string; accent: string; ring: strin
   all: { label: 'All', accent: 'text-white', ring: 'border-white/40', bg: 'bg-white/10' },
   web: { label: 'Web', accent: 'text-violet-400', ring: 'border-violet-500/50', bg: 'bg-violet-500/10' },
   mobile_reactnative: { label: 'React Native', accent: 'text-cyan-400', ring: 'border-cyan-500/50', bg: 'bg-cyan-500/10' },
-  mobile_native: { label: 'Native Mobile', accent: 'text-emerald-400', ring: 'border-emerald-500/50', bg: 'bg-emerald-500/10' },
-  mobile_flutter: { label: 'Flutter', accent: 'text-blue-400', ring: 'border-blue-500/50', bg: 'bg-blue-500/10' },
-  backend: { label: 'Backend', accent: 'text-orange-400', ring: 'border-orange-500/50', bg: 'bg-orange-500/10' },
-  n8n: { label: 'Automation', accent: 'text-pink-400', ring: 'border-pink-500/50', bg: 'bg-pink-500/10' },
+  backend: { label: 'Backend', accent: 'text-orange-400', ring: 'border-orange-500/50', bg: 'bg-orange-500/10' }
 };
 
 const getCategoryMeta = (cat: string) =>
@@ -135,7 +133,7 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   // unique categories present in data, preserving defined order
-  const categoryOrder = ['all', 'web', 'mobile_reactnative', 'mobile_native', 'mobile_flutter', 'backend', 'n8n'];
+  const categoryOrder = ['all', 'web', 'mobile_reactnative', 'backend'];
   const presentCategories = categoryOrder.filter(
     c => c === 'all' || ALL_PROJECTS.some(p => p.category === c)
   );
@@ -148,13 +146,6 @@ const Projects = () => {
     [activeCategory]
   );
 
-  // available tags from category-filtered projects (sorted by frequency)
-  const availableTags = useMemo(() => {
-    const freq: Record<string, number> = {};
-    categoryFiltered.forEach(p => p.tags.forEach(t => { freq[t] = (freq[t] ?? 0) + 1; }));
-    return Object.entries(freq).sort((a, b) => b[1] - a[1]).map(([t]) => t);
-  }, [categoryFiltered]);
-
   // final filtered list
   const filteredProjects = useMemo(() =>
     activeTags.length === 0
@@ -162,9 +153,6 @@ const Projects = () => {
       : categoryFiltered.filter(p => activeTags.every(t => p.tags.includes(t))),
     [categoryFiltered, activeTags]
   );
-
-  const toggleTag = (tag: string) =>
-    setActiveTags(prev => prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]);
 
   const handleCategoryChange = (cat: string) => {
     setActiveCategory(cat);
@@ -225,51 +213,6 @@ const Projects = () => {
               </button>
             )}
           </div>
-
-          {/* ── Tag Pills (secondary filter) ── */}
-          <AnimatePresence>
-            {availableTags.length > 0 && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.25 }}
-                className="mb-10"
-              >
-                <div className="flex items-center gap-2 mb-3 justify-center">
-                  <FaFilter className="text-gray-600 text-xs" />
-                  <span className="text-xs text-gray-500 font-medium tracking-wider uppercase">
-                    Filter by tech / platform
-                  </span>
-                </div>
-                <div className="flex flex-wrap justify-center gap-2">
-                  {availableTags.map(tag => {
-                    const active = activeTags.includes(tag);
-                    return (
-                      <button
-                        key={tag}
-                        id={`filter-tag-${tag}`}
-                        onClick={() => toggleTag(tag)}
-                        className={`
-                          px-3 py-1 rounded-full text-xs font-medium border transition-all duration-150
-                          ${active
-                            ? `${tagClass(tag)} ring-1 ring-offset-1 ring-offset-black/20 scale-105`
-                            : 'bg-surface/60 text-gray-500 border-gray-700 hover:border-gray-500 hover:text-gray-300'}
-                        `}
-                      >
-                        {tag}
-                      </button>
-                    );
-                  })}
-                </div>
-                {activeTags.length > 0 && (
-                  <p className="text-center text-xs text-gray-500 mt-3">
-                    Showing <span className="text-white font-semibold">{filteredProjects.length}</span> project{filteredProjects.length !== 1 ? 's' : ''} matching all selected tags
-                  </p>
-                )}
-              </motion.div>
-            )}
-          </AnimatePresence>
 
           {/* ── Projects Grid ── */}
           <AnimatePresence mode="wait">
@@ -403,7 +346,8 @@ const Projects = () => {
           >
             <p className="text-gray-400 mb-4">Want to see more of my work?</p>
             <a
-              href="https://github.com/mharis404"
+              href={personalInfo?.social?.github}
+              title={personalInfo?.social?.github}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"

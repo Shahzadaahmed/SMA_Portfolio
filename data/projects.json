@@ -1,26 +1,66 @@
 [
   {
-    "name": "EasyApply",
-    "desc": "A productivity-focused React Native mobile application designed for high-volume templated email outreach. Features a fully local, 100% data-sovereign architecture utilizing Google MediaPipe Tasks GenAI to run local LLM inference (Gemma 2B) on-device (CoreML/GPU accelerated) for smart job description parsing. Includes a native iOS Share Extension / Android ShareActivity, local Realm DB storage, Gmail and Outlook OAuth 2.0 integrations, and a gamified CRM kanban board.",
-    "image": "easyapply",
-    "image_format": "png",
+    "name": "Shaker Care",
+    "desc": "A React Native mobile application for Shaker Group that enables customers to request product services and installations, submit complaints, explore and purchase products, and connect with customer support through WhatsApp.",
+    "image": "shaker-care-project",
+    "image_format": "webp",
     "category": "mobile_reactnative",
-    "SubCategory": "frontend_only_mobileapp_hybrid",
+    "SubCategory": "fullstack_mobileapp",
     "tags": [
-      "react-native",
-      "typescript",
+      "mobile",
       "android",
       "ios",
-      "hybrid",
-      "mobile",
-      "mediapipe",
-      "realm",
-      "zustand",
-      "oauth",
+      "react-native",
+      "javascript",
+      "redux",
       "firebase"
     ],
     "links": {
-      "code": "https://github.com/MHaris404/easyapply"
+      "view": "https://play.google.com/store/apps/details?id=com.shaker_app&hl=en&pli=1"
+    }
+  },
+  {
+    "name": "Vibe",
+    "desc": "A cross-platform React Native shopping application developed for PSO petrol stations, enabling customers to browse and order convenience-store products through self-pickup or home delivery. The app provides location-based store selection and supports multiple payment options, including Cash on Delivery and DigiCash. Built with React Native, Redux, JavaScript, and Firebase to deliver a smooth and scalable mobile shopping experience across Android and iOS.",
+    "image": "vibe",
+    "image_format": "webp",
+    "category": "mobile_reactnative",
+    "SubCategory": "fullstack_mobileapp",
+    "tags": [
+      "mobile",
+      "android",
+      "ios",
+      "react-native",
+      "javascript",
+      "redux",
+      "firebase"
+    ],
+    "links": {
+      "view": "https://play.google.com/store/apps/details?id=com.vibe_app&hl=en"
+    }
+  },
+  {
+    "name": "Vibe Web App",
+    "desc": "VIBE is a comprehensive retail and e-commerce management platform designed to manage the complete lifecycle of convenience-store operations. The web-based admin dashboard provides centralized management of products, stores, orders, customers, discounts, vouchers, complaints, transactions, partnerships, banners, and store feedback. It also includes real-time business analytics with revenue tracking, monthly sales trends, sales growth, top-performing products, and customer/order statistics, enabling administrators to monitor and optimize overall store performance.",
+    "image": "vibe-web",
+    "image_format": "jpeg",
+    "category": "web",
+    "SubCategory": "fullstack_web",
+    "tags": [
+      "javascript",
+      "react",
+      "nextjs",
+      "redux",
+      "firebase",
+      "html",
+      "css",
+      "ecommerce",
+      "postgresql",
+      "nodejs",
+      "express"
+    ],
+    "links": {
+      "view": "https://vibe.qbscocloud.net"
     }
   },
   {
