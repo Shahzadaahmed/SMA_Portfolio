@@ -1,24 +1,23 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { personalInfo, userName } from "@/data/portfolio-data";
 
 export const metadata: Metadata = {
-  title: "Muhammad Haris | Senior Full Stack Software Engineer",
-  description: "Portfolio of Muhammad Haris - A passionate Senior Software Engineer with 5+ years of experience in full-stack development, specializing in mobile apps, web development, and cloud solutions.",
+  title: `${userName?.wellFormedUserName} | Senior Full Stack Software Engineer`,
+  description: `Portfolio of ${userName?.wellFormedUserName} - A passionate Senior Software Engineer with 5+ years of experience in full-stack development, specializing in mobile apps, web development, and cloud solutions.`,
   keywords: [
-    "Muhammad Haris",
+    userName?.wellFormedUserName,
     "Software Engineer",
     "Full Stack Developer",
     "React Native",
     "Mobile App Development",
     "Web Development",
-    "AWS",
-    "Node.js",
-    "Kotlin",
-    "Portfolio"
+    "Node JS",
+    "Database"
   ],
-  authors: [{ name: "Muhammad Haris", url: "https://linkedin.com/in/mharis404" }],
-  creator: "Muhammad Haris",
-  publisher: "Muhammad Haris",
+  authors: [{ name: userName?.wellFormedUserName, url: personalInfo?.social?.linkedin }],
+  creator: userName?.wellFormedUserName,
+  publisher: userName?.wellFormedUserName,
   robots: {
     index: true,
     follow: true,
@@ -33,27 +32,27 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://mharis404.github.io/portfolio/",
-    title: "Muhammad Haris | Senior Full Stack Software Engineer",
+    url: personalInfo?.social?.github,
+    title: `${userName?.wellFormedUserName} | Senior Full Stack Software Engineer`,
     description: "Portfolio showcasing expertise in mobile app development, web solutions, and cloud technologies. 5+ years of professional experience.",
-    siteName: "Muhammad Haris Portfolio",
+    siteName: `${userName?.wellFormedUserName} Portfolio`,
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Muhammad Haris Portfolio",
+        alt: `${userName?.wellFormedUserName} Portfolio`
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Muhammad Haris | Senior Full Stack Software Engineer",
-    description: "Portfolio showcasing expertise in mobile app development, web solutions, and cloud technologies.",
-    images: ["/og-image.png"],
-  },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   title: "Muhammad Haris | Senior Full Stack Software Engineer",
+  //   description: "Portfolio showcasing expertise in mobile app development, web solutions, and cloud technologies.",
+  //   images: ["/og-image.png"],
+  // },
   alternates: {
-    canonical: "https://mharis404.github.io/portfolio/",
+    canonical: personalInfo?.social?.github,
   },
   verification: {
     google: "your-google-verification-code",
@@ -78,33 +77,34 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              name: "Muhammad Haris",
+              name: userName?.wellFormedUserName,
               jobTitle: "Senior Full Stack Software Engineer",
-              url: "https://mharis404.github.io/portfolio/",
+              url: personalInfo?.social?.github,
               sameAs: [
-                "https://www.linkedin.com/in/mharis404/",
-                "https://github.com/mharis404",
-                "https://www.instagram.com/mharis404"
+                personalInfo?.social?.linkedin,
+                personalInfo?.social?.github,
+                personalInfo?.social?.facebook
               ],
-              email: "mharis.ksasen@gmail.com",
+              email: personalInfo?.email,
               address: {
                 "@type": "PostalAddress",
-                addressLocality: "Riyadh",
-                addressCountry: "SA"
+                addressLocality: "Karachi",
+                addressCountry: "PK"
               },
               alumniOf: {
                 "@type": "EducationalOrganization",
-                name: "Sir Syed University of Engineering and Technology"
+                name: "Hamdard University of Engineering and Technology"
               },
               knowsAbout: [
-                "Full Stack Development",
-                "Mobile App Development",
+                userName?.wellFormedUserName,
+                "Software Engineer",
+                "Full Stack Developer",
                 "React Native",
-                "AWS",
-                "Node.js",
-                "Kotlin",
-                "Software Engineering"
-              ]
+                "Mobile App Development",
+                "Web Development",
+                "Node JS",
+                "Database"
+              ],
             })
           }}
         />

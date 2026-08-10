@@ -1,6 +1,7 @@
 export const userName = {
   fullName: "shahzada muhammad ahmed",
-  myName: "shahzada m ahmed"
+  myName: "shahzada m ahmed",
+  wellFormedUserName: "Shahzada M Ahmed"
 };
 
 export const totalYearsOfExp = 5;
@@ -12,7 +13,6 @@ export const personalInfo = {
   email: "shahzada.ahmed1996@gmail.com",
   alternateEmail: "shahzada.ahmed1996@gmail.com",
   phone: {
-    ksa: "+966 568 126 523",
     pak: "+92 314 2117550"
   },
   location: {
@@ -24,7 +24,6 @@ export const personalInfo = {
   social: {
     linkedin: "https://www.linkedin.com/in/shahzada-muhammad-ahmed-rana-5b15231a9",
     github: "https://github.com/Shahzadaahmed",
-    gist: "https://gist.github.com/mharis404",
     facebook: "https://www.facebook.com/Codemaster08.07.95"
   },
   resumeLink: "https://flowcv.com/resume/aso4435bjsjw"
@@ -67,14 +66,6 @@ export const businessValue = [
 
 export const testimonials = [
   {
-    name: "Romaan Hanif",
-    role: "Digital Marketing Expert",
-    company: "The Master Jackets",
-    content: "Shahzada developed a scalable eCommerce backend for our business using Node.js and MongoDB. The system was well-structured, performant, and designed to handle future growth. His technical expertise, problem-solving ability, and commitment to delivering quality solutions made him a valuable part of the project.",
-    date: "January 19, 2026",
-    initials: "RH"
-  },
-  {
     name: "Faraz Quddusi",
     role: "Chief Executive Officer",
     company: "QBS Corporation Private Limited",
@@ -91,12 +82,28 @@ export const testimonials = [
     initials: "BR"
   },
   {
+    name: "Romaan Hanif",
+    role: "Digital Marketing Expert",
+    company: "The Master Jackets",
+    content: "Shahzada developed a scalable eCommerce backend for our business using Node.js and MongoDB. The system was well-structured, performant, and designed to handle future growth. His technical expertise, problem-solving ability, and commitment to delivering quality solutions made him a valuable part of the project.",
+    date: "January 19, 2026",
+    initials: "RH"
+  },
+  {
     name: "Zeeshan Aijaz",
     role: "Academics Lead",
     company: "Saylani Welfare International Trust",
-    content: "Shahzada has been an exceptional Software Development Trainer at Saylani. His ability to simplify complex programming concepts, mentor students with patience, and provide hands-on industry guidance has helped many learners build strong development skills. He is passionate about teaching and always encourages students to follow modern software engineering best practices.",
+    content: "Shahzada Ahmed has been an exceptional Software Development Trainer at Saylani. His ability to simplify complex programming concepts, mentor students with patience, and provide hands-on industry guidance has helped many learners build strong development skills. He is passionate about teaching and always encourages students to follow modern software engineering best practices.",
     date: "August 3, 2026",
     initials: "ZA"
+  },
+  {
+    name: "Muhammad Shoaib",
+    role: "Chief Executive Officer",
+    company: "Tech Zone Learning Institute",
+    content: "Shahzada Ahmed was an exceptional Lead Trainer who consistently demonstrated strong technical expertise and a genuine passion for teaching. He delivered complex software development concepts in a clear and practical manner, guided students through real-world projects, and helped them build strong problem-solving and development skills. His dedication, professionalism, and ability to mentor aspiring developers made him a valuable part of our training team.",
+    date: "February 5, 2024",
+    initials: "MS"
   },
 ];
 
@@ -296,9 +303,9 @@ export const projects = [
     title: "Portfolio Website",
     description: "Personal portfolio website showcasing my work, skills, and professional journey. Built with modern web technologies and optimized for performance.",
     image: "/projects/portfolio.png",
-    tags: ["Next.js", "React", "TailwindCSS", "TypeScript", "Framer Motion"],
-    liveUrl: "https://mharis404.github.io/portfolio/",
-    githubUrl: "https://github.com/MHaris404/portfolio",
+    tags: ["Next JS", "React JS", "TailwindCSS", "TypeScript", "Framer Motion"],
+    liveUrl: "",
+    githubUrl: personalInfo?.social?.github,
     featured: true,
     category: "web"
   },
@@ -332,24 +339,5 @@ export const projects = [
   //   githubUrl: "https://github.com/mharis404/ecommerce-app",
   //   featured: true,
   //   category: "mobile"
-  // },
-  // {
-  //   title: "Task Management System",
-  //   description: "Enterprise task management platform with team collaboration, real-time updates, and advanced analytics dashboard.",
-  //   image: "/projects/taskmanager.png",
-  //   tags: ["Node.js", "Express", "MongoDB", "Socket.io", "React"],
-  //   liveUrl: "https://task-app.com",
-  //   githubUrl: "https://github.com/mharis404/task-manager",
-  //   featured: true,
-  //   category: "web"
-  // },
-  // {
-  //   title: "AI Chatbot Platform",
-  //   description: "Intelligent chatbot platform using NLP and machine learning for customer support automation.",
-  //   image: "/projects/chatbot.png",
-  //   tags: ["Python", "TensorFlow", "FastAPI", "React", "Docker"],
-  //   githubUrl: "https://github.com/mharis404/ai-chatbot",
-  //   featured: false,
-  //   category: "ai"
-  // },
+  // }
 ];
