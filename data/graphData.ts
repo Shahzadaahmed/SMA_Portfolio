@@ -1,4 +1,4 @@
-import { projects as portfolioProjects, skills, experience, education } from './portfolio-data';
+import { projects as portfolioProjects, skills, experience, education, userName } from './portfolio-data';
 import projectsJson from './projects.json';
 
 export interface GraphNode {
@@ -20,7 +20,7 @@ export const getGraphData = () => {
   const links: GraphLink[] = [];
 
   // 1. Root Node
-  nodes.push({ id: 'root', label: 'Muhammad Haris', group: 'user', val: 20 });
+  nodes.push({ id: 'root', label: userName?.wellFormedUserName, group: 'user', val: 20 });
 
   // 2. Categories
   const categories = ['Web', 'Mobile', 'Backend', 'Automation'];

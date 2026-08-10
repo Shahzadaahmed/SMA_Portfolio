@@ -191,7 +191,7 @@
   },
   {
     "name": "The Master Jackets Back_End",
-    "desc": "Developed the backend infrastructure for Angel Jackets, a full-featured e-commerce platform, using Node.js, Express.js, and MongoDB. The backend provides RESTful APIs for product management, categories, users, authentication, shopping cart, orders, inventory, and customer operations. Integrated Stripe for secure online payment processing and implemented the core business logic required to support the complete e-commerce workflow. The backend was deployed on Heroku to provide a scalable and reliable production environment.",
+    "desc": "Developed the backend infrastructure for The Master Jackets, a full-featured e-commerce platform, using Node.js, Express.js, and MongoDB. The backend provides RESTful APIs for product management, categories, users, authentication, shopping cart, orders, inventory, and customer operations. Integrated Stripe for secure online payment processing and implemented the core business logic required to support the complete e-commerce workflow. The backend was deployed on Heroku to provide a scalable and reliable production environment.",
     "image": "back-end",
     "image_format": "webp",
     "category": "backend",
