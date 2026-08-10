@@ -60,31 +60,7 @@
     }
   },
   {
-    "name": "Vibe Web Portal",
-    "desc": "VIBE is a comprehensive retail and e-commerce management platform designed to manage the complete lifecycle of convenience-store operations. The web-based admin dashboard provides centralized management of products, stores, orders, customers, discounts, vouchers, complaints, transactions, partnerships, banners, and store feedback. It also includes real-time business analytics with revenue tracking, monthly sales trends, sales growth, top-performing products, and customer/order statistics, enabling administrators to monitor and optimize overall store performance.",
-    "image": "vibe-web",
-    "image_format": "jpeg",
-    "category": "web",
-    "SubCategory": "fullstack_web",
-    "tags": [
-      "javascript",
-      "react",
-      "nextjs",
-      "redux",
-      "firebase",
-      "html",
-      "css",
-      "ecommerce",
-      "postgresql",
-      "nodejs",
-      "express"
-    ],
-    "links": {
-      "view": "https://vibe.qbscocloud.net"
-    }
-  },
-  {
-    "name": "Neuconnect - Master Oil",
+    "name": "Neuconnect Web Portal",
     "desc": "A comprehensive warehouse Track & Trace management system designed to streamline production, inventory, warehouse, and dispatch operations. The platform enables organizations to monitor production lines, manage production orders, track bottles, cartons and pallets, assign warehouses and handling units, generate barcodes, and manage sales and delivery orders. It provides centralized operational dashboards with real-time production, warehouse, and dispatch metrics, helping teams maintain end-to-end visibility and traceability across the supply chain.",
     "image": "master-oil",
     "image_format": "jpeg",
@@ -105,6 +81,54 @@
     ],
     "links": {
       "view": "http://163.61.91.152:32179"
+    }
+  },
+  {
+    "name": "Vibe Web Portal",
+    "desc": "VIBE is a comprehensive retail and e-commerce management platform designed to manage the complete lifecycle of convenience-store operations. The web-based admin dashboard provides centralized management of products, stores, orders, customers, discounts, vouchers, complaints, transactions, partnerships, banners, and store feedback. It also includes real-time business analytics with revenue tracking, monthly sales trends, sales growth, top-performing products, and customer/order statistics, enabling administrators to monitor and optimize overall store performance.",
+    "image": "vibe-web",
+    "image_format": "jpeg",
+    "category": "web",
+    "SubCategory": "fullstack_web_mobileapps",
+    "tags": [
+      "javascript",
+      "react",
+      "nextjs",
+      "redux",
+      "firebase",
+      "html",
+      "css",
+      "ecommerce",
+      "postgresql",
+      "nodejs",
+      "express"
+    ],
+    "links": {
+      "view": "https://vibe.qbscocloud.net"
+    }
+  },
+  {
+    "name": "Blue Web Portal",
+    "desc": "A comprehensive web-based administration portal for managing BLUE LPG operations, designed to provide centralized control over customers, LPG orders, inventory, and logistics. The portal enables administrators to monitor cylinder movements in real time, manage customer and order data, track inventory, oversee distribution and logistics operations, and gain data-driven insights through analytics. It provides end-to-end visibility into LPG distribution workflows, helping streamline operations and optimize the delivery network across Pakistan.",
+    "image": "blue-web",
+    "image_format": "png",
+    "category": "web",
+    "SubCategory": "fullstack_web_mobileapps",
+    "tags": [
+      "javascript",
+      "react",
+      "nextjs",
+      "redux",
+      "firebase",
+      "html",
+      "css",
+      "ecommerce",
+      "postgresql",
+      "nodejs",
+      "express"
+    ],
+    "links": {
+      "view": "http://163.61.91.86:3000"
     }
   },
   {
@@ -147,25 +171,44 @@
     }
   },
   {
-    "name": "Nodejs-Mono-to-Micro-Architecture",
-    "desc": "Microservices-based architecture. Webhooks, RabbitMQ, Docker, CI/CD, RabbitMQ, Sentry",
-    "image": "mern_docker",
+    "name": "The Master Jackets Website",
+    "desc": "A modern e-commerce platform for The Master Jackets, specializing in premium leather jackets and outerwear for men and women. The platform provides a complete online shopping experience with product catalogs, detailed product pages, size guides, product variations, pricing and promotions, customer reviews, wishlists, cart and checkout functionality, and shipping and return information. The responsive interface is designed to provide a seamless and engaging shopping experience across devices.",
+    "image": "tmj",
+    "image_format": "png",
+    "category": "web",
+    "SubCategory": "frontend_only_web",
+    "tags": [
+      "html",
+      "css",
+      "bootstrap",
+      "materialui",
+      "javascript",
+      "react"
+    ],
+    "links": {
+      "view": "https://themasterjackets-web.vercel.app/"
+    }
+  },
+  {
+    "name": "The Master Jackets Back_End",
+    "desc": "Developed the backend infrastructure for Angel Jackets, a full-featured e-commerce platform, using Node.js, Express.js, and MongoDB. The backend provides RESTful APIs for product management, categories, users, authentication, shopping cart, orders, inventory, and customer operations. Integrated Stripe for secure online payment processing and implemented the core business logic required to support the complete e-commerce workflow. The backend was deployed on Heroku to provide a scalable and reliable production environment.",
+    "image": "back-end",
     "image_format": "webp",
     "category": "backend",
-    "SubCategory": "backend_microservices",
+    "SubCategory": "backend",
     "tags": [
+      "javascript",
       "nodejs",
+      "expressjs",
       "mongodb",
-      "express",
-      "rabbitmq",
-      "docker",
-      "typescript",
-      "sentry",
+      "stripe",
+      "heroku",
+      "webhooks",
+      "payments",
       "ci/cd"
     ],
     "links": {
-      "view": "https://github.com/mharis404/Nodejs-Mono-to-Micro-Architecure",
-      "code": "https://github.com/mharis404/Nodejs-Mono-to-Micro-Architecure"
+      "code": "https://github.com/Shahzadaahmed/The_Master_Jackets_BackEnd"
     }
   }
 ]
