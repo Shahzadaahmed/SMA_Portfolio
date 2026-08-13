@@ -78,13 +78,10 @@ const About = () => {
                   transition={{ duration: 0.6, delay: 0.6 }}
                 >
                   I&apos;m a Senior Full Stack MERN Developer with 5+ years of experience delivering scalable, high-performance web and mobile applications across the entire software development lifecycle. Proficient in React.js, Next.js, Node.js, Express.js, MongoDB, React Native, and TypeScript, with expertise in designing robust system architectures, developing secure REST APIs, and building intuitive, production-ready user experiences.
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 0.7 }}
-                >
-                  I&apos;ve delivered engineering excellence across healthcare, digital strategy, and e-commerce platforms — working with global teams from Australia to the British Virgin Islands. I work deeply within Agile/Scrum environments, leveraging DevOps practices and AI tools like Claude AI, Llama, and Qwen to accelerate development, improve code coverage, and deliver premium user experiences.
+                  <br /> <br />
+                  Experienced in System Design, MVC and Event-Driven Architectures, CI/CD pipelines and deployment workflows. Strong advocate of clean architecture, performance optimization, and modern development practices, with practical experience using AI-assisted development tools to streamline engineering workflows and improve productivity.
+                  <br /> <br />
+                  Known for taking ownership, solving complex technical challenges, mentoring developers, and delivering maintainable software that aligns technical excellence with business objectives.
                 </motion.p>
               </div>
 
